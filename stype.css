@@ -1,0 +1,257 @@
+
+body {
+  background-image: url(./images/bg-desktop.png);
+  background-color: hsl(229, 57%, 11%);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  min-height: 100vh;
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 60%;
+  gap: 2rem;
+}
+
+
+
+.one {  
+  background-color: hsl(228, 56%, 26%);
+  padding: 2rem;
+  border-radius: 10px 80px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%;
+}
+.logo {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.logo svg {  
+  background-color:  hsl(229, 57%, 11%);
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 0.7rem;
+  border-radius: 10px;
+  
+}
+
+.two {
+  display: flex; 
+  flex-direction: column;
+  background-color: hsl(228, 56%, 26%);
+  padding: 2rem;
+  border-radius: 10px;
+  color: hsl(243, 100%, 93%);
+  flex-basis: 70%;
+}
+
+
+
+.size {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {  
+  position: relative;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem 0.5rem 0 0.5rem;
+  background-color: #fff;
+  color: hsl(229, 7%, 55%);
+  font-weight: 700;
+  margin-top: -5rem;
+  margin-left: 67%;
+  width: 7rem;
+}
+
+.left::before {
+  content: "";
+  position: absolute;
+  bottom: -0.9rem;
+  right: -1rem;
+  border-width: 1rem;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+  transform: rotate(-135deg);
+}
+
+.span {
+  font-size: 2rem;   
+  color: hsl(229, 57%, 11%);
+}
+
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+input[type="range"] {
+  position: relative;
+  width: 100%;
+  height: 0.75rem;
+  appearance: none;
+  background-color: hsla(229, 57%, 11%, 0.5);
+  border-radius: 3.125rem;
+  outline: 0.15rem solid hsla(229, 57%, 11%, 0.5);
+  margin-bottom: 1rem;
+  z-index: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 0.65rem;
+  height: 0.65rem;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+
+input[type="range"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 82%;
+  background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  border-radius: 3.125rem;
+  z-index: -1;
+}
+
+footer {
+  margin-top: 2rem;
+}
+
+.attribution {
+  color: hsl(243, 100%, 93%);
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+@media (max-width:1350px) and (min-width:1201px)  {
+  main {
+    width: 70%;
+  }
+}
+
+@media (max-width:1200px) and (min-width:1051px) {
+  main {
+    width: 75%;
+  }
+}
+
+@media (max-width:1050px) and (min-width:900px) {
+  main {
+    width: 90%;
+  }
+
+}
+
+@media (max-width:901px) and (min-width:776px) {
+  main {
+    width: 100%;
+  }
+}
+
+@media (max-width:775px)  {
+  body {
+    background-image: url(./images/bg-mobile.png);
+    background-size: cover;
+  }
+
+  main {
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+  }
+
+  .one {
+    margin: 0;    
+    flex-basis:30%;
+  }
+
+  .two {
+    flex-basis: 80%;
+  }
+
+  .left {
+    position: absolute;
+    margin-top: 4rem;
+    margin-left: 30%;
+    width: 6.5rem;    
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+  }
+
+  .left::before {
+    border-color: transparent;
+  }
+
+  @media (max-width:600px){
+    .left {
+      margin-left: 25%;
+    }
+  
+  }
+
+  @media (max-width:450px){
+    .left {
+      margin-left: 20%;
+    }
+  
+  }
+
+  @media (max-width:360px){
+    .left {
+      margin-left: 15%;
+      font-size: smaller;
+      text-align: center;
+    }
+
+    .span {
+      font-size: 1.5rem;
+    }
+  
+  }
+
+  @media (max-width:359px){
+    .art {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .left {
+      flex: 1;
+
+    }
+
+    .span {
+      font-size: 1.5rem;
+      flex: 1;
+    }
+  
+  }
+}
+
